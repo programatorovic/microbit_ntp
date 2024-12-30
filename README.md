@@ -1,4 +1,6 @@
 # Microbit Wifi Package for ESP8266 module
+Project-based testing:
+https://github.com/Interpause/pxt-esp8266iot/tree/master
 
 Microbit Makecode extension to allow the microbit to use the ESP8266's wifi connection abilities.
 
@@ -7,7 +9,7 @@ Microbit Makecode extension to allow the microbit to use the ESP8266's wifi conn
 
 ESP8266 is an [~$5 wifi module](https://www.elecfreaks.com/estore/esp8266-serial-wifi-module.html), used in many tinkering projects to provide wifi to controller boards. This specific package is meant for [Microsoft's PXT for Micro:bit](https://makecode.microbit.org/) and comes with a good range of custom blocks to make your life easier, especially since there currently is little Micro:bit support for the ESP8266.
 
-It features fairly well-laid foundational code, built on different transport layers with different protocols to maximize the potential of this cheap but powerful Wifi module. The user can have precise control via the [command system](command_queue.ts), and on a higher level, good HTTP support with the [request system](request_queue.ts). 
+It features fairly well-laid foundational code, built on different transport layers with different protocols to maximize the potential of this cheap but powerful Wifi module. The user can have precise control via the [command system](command_queue.ts), and on a higher level, good HTTP support with the [request system](request_queue.ts).
 
 So what are you waiting for? Dive right in!
 
@@ -58,7 +60,7 @@ Commands are sent to the ESP8266 over Serial and often are hard to handle. This 
 
 ## Plans
 1. Bug testing, especially in regards to the different request types.
-2. Firmware compatibility testing. The commands I used should work across all versions but for your reference, I am using [ai-thinker-0.9.5.2-9600.bin](http://wiki.aprbrother.com/en/Firmware_For_ESP8266.html). 
+2. Firmware compatibility testing. The commands I used should work across all versions but for your reference, I am using [ai-thinker-0.9.5.2-9600.bin](http://wiki.aprbrother.com/en/Firmware_For_ESP8266.html).
     * Here is a [tutorial](https://nodemcu.readthedocs.io/en/latest/en/flash/) on how to flash the ESP8266 module.
 3. User-specified headers for requests.
 4. Bring in some form of JSON to handle more forms of data for requests.
@@ -71,7 +73,7 @@ Commands are sent to the ESP8266 over Serial and often are hard to handle. This 
 11. Have a mesh network mode.
 
 ## Credits
-The [original ESP8266 package](https://github.com/elecfreaks/pxt-esp8266iot) was developed under the cooperation of [ElecFreaks](https://www.elecfreaks.com/), [Classroom](http://www.classroom.com.hk/) and [Tinkeracademy](https://tinkercademy.com/). 
+The [original ESP8266 package](https://github.com/elecfreaks/pxt-esp8266iot) was developed under the cooperation of [ElecFreaks](https://www.elecfreaks.com/), [Classroom](http://www.classroom.com.hk/) and [Tinkeracademy](https://tinkercademy.com/).
 
 This package was made by [Interpause@Github](https://github.com/Interpause) while interning at Tinkercademy when tasked to improve the original. The package ended up being a complete rewrite however.
 
