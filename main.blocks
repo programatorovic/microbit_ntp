@@ -1,0 +1,156 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="1km}%~Swmxu_v6:cBDFP">item</variable>
+  </variables>
+  <block type="pxt-on-start" x="0" y="0">
+    <statement name="HANDLER">
+      <block type="radio_set_group">
+        <value name="ID">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="wifi_init">
+            <field name="wifiRX">SerialPin.P0</field>
+            <field name="wifiTX">SerialPin.P1</field>
+            <field name="mode">WifiMode.client</field>
+            <next>
+              <block type="basic_show_icon">
+                <field name="i">IconNames.Heart</field>
+                <next>
+                  <block type="device_while">
+                    <value name="COND">
+                      <shadow type="logic_boolean">
+                        <field name="BOOL">TRUE</field>
+                      </shadow>
+                      <block type="logic_negate">
+                        <value name="BOOL">
+                          <shadow type="logic_boolean">
+                            <field name="BOOL">TRUE</field>
+                          </shadow>
+                          <block type="wifi_connect">
+                            <value name="ssid">
+                              <shadow type="text">
+                                <field name="TEXT">your-wifi</field>
+                              </shadow>
+                            </value>
+                            <value name="key">
+                              <shadow type="text">
+                                <field name="TEXT">your-passwd</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="device_pause">
+                        <value name="pause">
+                          <shadow type="math_number">
+                            <field name="NUM">1000</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="device_while">
+                        <value name="COND">
+                          <shadow type="logic_boolean">
+                            <field name="BOOL">TRUE</field>
+                          </shadow>
+                        </value>
+                        <statement name="DO">
+                          <block type="basic_show_icon">
+                            <field name="i">IconNames.SmallDiamond</field>
+                            <next>
+                              <block type="variables_set">
+                                <field name="VAR" id="1km}%~Swmxu_v6:cBDFP" variabletype="">item</field>
+                                <value name="VALUE">
+                                  <shadow type="math_number">
+                                    <field name="NUM">0</field>
+                                  </shadow>
+                                  <block type="web_request_waitfor">
+                                    <field name="method">httpMethod.GET</field>
+                                    <value name="uri">
+                                      <block type="text_join">
+                                        <mutation items="8"></mutation>
+                                        <value name="ADD0">
+                                          <shadow type="text">
+                                            <field name="TEXT">api.thingspeak.com/update?api_key=</field>
+                                          </shadow>
+                                        </value>
+                                        <value name="ADD1">
+                                          <shadow type="text">
+                                            <field name="TEXT">not-my-key</field>
+                                          </shadow>
+                                        </value>
+                                        <value name="ADD2">
+                                          <block type="text">
+                                            <field name="TEXT">&amp;field1=</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD3">
+                                          <block type="device_acceleration">
+                                            <field name="NAME">Dimension.X</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD4">
+                                          <block type="text">
+                                            <field name="TEXT">&amp;field2=</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD5">
+                                          <block type="device_acceleration">
+                                            <field name="NAME">Dimension.Y</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD6">
+                                          <block type="text">
+                                            <field name="TEXT">&amp;field3=</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD7">
+                                          <block type="device_acceleration">
+                                            <field name="NAME">Dimension.Z</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="data">
+                                      <shadow type="text">
+                                        <field name="TEXT"></field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="basic_show_icon">
+                                    <field name="i">IconNames.Diamond</field>
+                                    <next>
+                                      <block type="device_pause">
+                                        <value name="pause">
+                                          <shadow type="math_number">
+                                            <field name="NUM">2000</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

@@ -1,0 +1,17 @@
+{
+    "name": "PXT-ESP8266",
+    "dependencies": {
+        "core": "*",
+        "radio": "*"
+    },
+    "description": "",
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "init_config.ts",
+        "command_queue.ts",
+        "request_queue.ts",
+        "enums.ts",
+        "README.md"
+    ]
+}
